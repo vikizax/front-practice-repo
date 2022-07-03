@@ -1,0 +1,35 @@
+.item {
+    border: 1px solid #333;
+    background-color: #777;
+    width: 75px;
+    color: yellow;
+    margin: 10px;
+}
+
+/* inside flexbox margin does not collapse */
+.container {
+    /* display: inline-flex; */
+    display: flex;
+    background-color: #ccc;
+    border: 1px solid black;
+}
+
+.item1 {
+    min-height: 50px;
+    align-self: flex-start;
+    flex-grow: 1;
+    flex-shrink: 0;
+    /* flex-basis: 0; */
+    /* order: 3; */
+}
+
+.item2 {
+    min-height: 100px;
+    align-self: center;
+    /* order: 1; */
+}
+
+.item3 {
+    min-height: 150px;
+    align-self: flex-end;
+}

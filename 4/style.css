@@ -1,0 +1,44 @@
+/* * {
+    margin: 0;
+    box-sizing: border-box;
+} */
+
+/* input {
+    margin-bottom: 10px;
+} */
+
+/* .email:disabled {
+    background-color: hsl(24, 85%, 76%);
+} */
+
+/* .submit:focus {
+    background-color: green;
+} */
+
+/* .name:hover {
+    background-color: red;
+}
+*/
+/* .name:focus {
+    background-color: yellow;
+}  */
+
+/* .name:required {
+    background-color: blueviolet;
+} */
+
+span:first-of-type {
+    color: red
+}
+
+/* span:last-of-type {
+    color: purple;
+} */
+
+span:nth-child(2n) {
+    color: green;
+}
+
+span:nth-child(3) {
+    color: purple;
+}

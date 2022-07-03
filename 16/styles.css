@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 200vh;
+}
+
+/* default value of position is static */
+
+.parent {
+    padding: .25rem;
+    background-color: lightskyblue;
+    position: relative;
+    z-index: 10;
+}
+
+.child1 {
+    position: sticky;
+    top: 10px;
+    padding: .25rem;
+    z-index: 0;
+    background-color: lightcoral;
+}
+
+.child2 {
+    padding: .25rem;
+    background-color: lightgreen;
+}
+
+.child3 {
+    padding: .25rem;
+    background-color: peru;
+}
+
+.parent2 {
+    margin-top: 10px;
+    padding: .25rem;
+    background-color: lightskyblue;
+    position: relative;
+    z-index: 2;
+}

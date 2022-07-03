@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+    line-height: 1.5;
+}
+
+.header,
+.footer {
+    background-color: #006699;
+    padding: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+.section {
+    padding: 1rem 2rem;
+}
+
+.section-accent {
+    background-color: #006699;
+    color: white;
+}
+
+.section-content {
+    padding-left: 1rem;
+}
+
+.section-content.skills-section,
+.section-content.project-section {
+    list-style: none;
+    margin: 0;
+}
+
+.section-content.skills-section {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.section-content.project-section {
+    color: #777;
+}
+
+.section-content.project-section .project-list-item {
+    margin-bottom: 1rem;
+}
+
+.section-content.project-section .project-list-item:last-child {
+    margin-bottom: 0;
+}
+
+.section-content.contact-section {
+    margin: 2rem 0;
+}
+
+.section-content.contact-section .input {
+    border: 1px solid #AAA;
+    padding: .5em;
+    font-size: 1rem;
+    border-radius: .2em;
+    font-family: inherit;
+    line-height: inherit;
+}
+
+.section-content.contact-section .input:focus {
+    border-color: #069;
+    outline: none;
+    box-shadow: 0 0 5px 0 hsl(200, 100%, 50%);
+}
+
+.section-content.contact-section .textarea {
+    resize: none;
+}
+
+.section-content.contact-section .btn {
+    background-color: hsl(200, 100%, 50%);
+    border: 1px solid hsl(200, 100%, 30%);
+    border-radius: .3em;
+    cursor: pointer;
+    padding: .5em 1em;
+    outline: none;
+    color: white;
+}
+
+.section-content.section-content.contact-section .btn:hover,
+.section-content.section-content.contact-section .btn:hover {
+    background-color: hsl(200, 100%, 30%);
+    box-shadow: 0 0 5px 0 hsl(200, 100%, 50%);
+}
