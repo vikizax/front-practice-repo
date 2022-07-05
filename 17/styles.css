@@ -1,0 +1,14 @@
+/* column layout */
+
+.parent {
+    height: 100vh;
+    column-width: 150px;
+    /* column-count: 2; */
+    column-rule: 1px solid black;
+    /* column-gap: 5px; */
+    /* column-fill: auto; */
+}
+
+h2 {
+    /* column-span: all; */
+}

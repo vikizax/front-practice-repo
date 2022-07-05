@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" s content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page: Flexbox + Grid layout demo!</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="full-screen-header">
+      <nav class="nav nav-top">
+        <img
+          src="./img/wds_logo.png"
+          class="logo"
+          alt="Web Dev Simplified Logo"
+        />
+        <ul class="nav-list">
+          <li>
+            <a href="#">Curriculam</a>
+          </li>
+          <li>
+            <a href="#">Pricing</a>
+          </li>
+          <li>
+            <a href="#" class="btn">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <h1 class="title">WDS Bootcamp</h1>
+      <span class="sub-title">From No Stack to Full Stack</span>
+      <a href="#" class="btn">Learn More</a>
+      <a href="#curriculam">
+        <img
+          src="./img/arrow_down.svg"
+          class="scroll-down-icon"
+          alt="Scroll Down Icon"
+        />
+      </a>
+    </header>
+
+    <main id="main">
+      <section class="section">
+        <h2 id="curriculam" class="section-title">Curriculam</h2>
+        <div class="grid-container">
+          <div class="grid-row">
+            <img src="./img/html_icon.svg" alt="HTML 5 Icon" />
+            <p>
+              Start with the basics by learning how to build a simple HTML page.
+              And Stylw it with CSS!
+            </p>
+          </div>
+          <div class="grid-row">
+            <img src="./img/node_js_icon.svg" alt="Node Js Icon" />
+            <p>
+              Learn how to use Node.js to build a server that can handle HTTP
+              requests.
+            </p>
+          </div>
+          <div class="grid-row">
+            <img src="./img/vscode_icon.svg" alt="VS Code Icon" />
+            <p>
+              Learn how to use Visual Studio Code to build and debug your
+              projects.
+            </p>
+          </div>
+          <div class="grid-row">
+            <img src="./img/database_icon.svg" alt="Database Icon" />
+            <p>Learn how to use a database to store and retrieve data.</p>
+          </div>
+          <div class="grid-row">
+            <img src="./img/edit_page_icon.svg" alt="React Icon" />
+            <p>Learn about wireframing using Figma and Sketch.</p>
+          </div>
+          <div class="grid-row">
+            <img src="./img/react_icon.svg" alt="HTML 5 Icon" />
+            <p>Learn how to use React to build a front-end.</p>
+          </div>
+        </div>
+      </section>
+      <section class="section section-accent">
+        <h2 class="section-title free-title">Free</h2>
+        <p class="free-sub-title">
+          All the content is free to use. No credit card required!
+        </p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Contact</h2>
+        <form class="form">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" />
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+          <label for="message">Message</label>
+          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+          <div class="btn-container">
+            <button type="submit" class="btn btn-square">Send</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <nav class="nav">
+        <img
+          src="./img/wds_logo.png"
+          class="logo"
+          alt="Web Dev Simplified Logo"
+        />
+        <ul class="nav-list">
+          <li>
+            <a href="#">Curriculam</a>
+          </li>
+          <li>
+            <a href="#">Pricing</a>
+          </li>
+          <li>
+            <a href="#" class="btn">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
