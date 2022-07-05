@@ -1,0 +1,18 @@
+:root {
+    --primary-color: rgb(52, 144, 52);
+    --margin: 0;
+}
+
+h2 {
+    /* custom properties follows specificity */
+    /* --margin: 10px; */
+    background-color: var(--primary-color);
+    color: white;
+    padding: .25rem;
+    margin: var(--margin, 10px);
+}
+
+p {
+    color: var(--primary-color);
+    margin: var(--margin, 5px);
+}

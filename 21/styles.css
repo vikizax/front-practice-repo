@@ -1,0 +1,9 @@
+h2 {
+    margin: 1rem;
+}
+
+p {
+    --margin: 10px;
+    margin : calc(var(--margin) + 2px);
+    /* margin : calc(10% + 2rem); */
+}
