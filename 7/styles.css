@@ -2,9 +2,7 @@
     box-sizing: border-box;
 }
 
-html,
 body {
-    padding: 0;
     margin: 0;
 }
 
@@ -14,42 +12,60 @@ input {
 
 .input-container {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
 }
 
 .input {
-    background-color: hsl(0, 0%, 100%);
-    border: 1px solid hsl(0, 1%, 30%);
+    --initial-background-hue: 0;
+    --initial-background-saturation: 0%;
+    --initial-background-lightness: 100%;
+
+    --background-hue: var(--initial-background-hue);
+    --background-saturation: var(--initial-background-saturation);
+    --background-lightness: var(--initial-background-lightness);
+
+    --initial-border-width: 1px;
+    --initial-border-type: solid;
+
+    --border-width: var(--initial-border-width);
+    --border-type: var(--initial-border-type);
+
+    border: var(--border-width) var(--border-type) hsl(var(--background-hue), var(--background-saturation), calc(var(--background-lightness) - 20%));
     outline: none;
     cursor: pointer;
     padding: .5em 1em;
 }
 
 .input:focus {
-    box-shadow: 0 0 4px 0 hsl(197, 100%, 50%);
-    border-color: hsl(197, 99%, 40%);
+    --background-hue: 197;
+    --background-saturation: 100%;
+    --background-lightness: 50%;
+
+    border-color: hsl(var(--background-hue), var(--background-saturation), var(--background-lightness));
+    box-shadow: 0 0 4px 0 hsl(var(--background-hue), var(--background-saturation), calc(var(--background-lightness) - 10%));
 }
 
 .input:disabled {
-    background-color: hsl(0, 0%, 90%);
-    color: hsl(0, 0%, 20%);
-    border: 1px solid hsl(0, 1%, 30%);
+    --background-hue: var(--initial-background-hue);
+    --background-saturation: var(--initial-background-saturation);
+    --background-lightness: var(--initial-background-lightness);
+
+    background-color: hsl(var(--background-hue), var(--background-saturation), calc(var(--background-lightness) - 10%));
+    color: hsl(var(--background-hue), var(--background-saturation), calc(var(--background-lightness) - 80%));
+    border: 1px solid hsl(var(--background-hue), var(--background-saturation), calc(var(--background-lightness) - 20%));
 }
 
 .input.input-success {
-    border-color: hsl(111, 60%, 50%);
+    --background-hue: 111;
+    --background-saturation: 60%;
+    --background-lightness: 80%;
 }
 
-.input.input-success:focus {
-    box-shadow: 0 0 4px 0 hsl(111, 60%, 40%);
-}
 
 .input.input-error {
-    border-color: hsl(0, 80%, 50%);
-}
-
-.input.input-error:focus {
-    box-shadow: 0 0 4px 0 hsl(0, 80%, 40%);
+    --background-hue: 0;
+    --background-saturation: 80%;
+    --background-lightness: 80%;
 }
 
 .input.input-large {
