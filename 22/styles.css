@@ -1,0 +1,63 @@
+/* all children */
+div span {
+    background-color: aqua;
+}
+
+/* direct children */
+div>span {
+    background-color: aquamarine;
+}
+
+span {
+    background-color: blueviolet;
+}
+
+/* all sibling that comes after */
+h2~p {
+    background-color: chartreuse;
+}
+
+/* only first sibling that comes after */
+div+p {
+    background-color: cornflowerblue;
+}
+
+/* not selector: eg only p that does not have .green class */
+/* not selector can be chained!  */
+p:not(.green):not(.red) {
+    background-color: brown;
+}
+
+/* [] attribute selector */
+input[type="checkbox"]:not(:checked) {
+    margin: 20px;
+}
+
+input[type="text"] {
+    background-color: #777;
+}
+
+/* also applies to custom margin */
+input[data-margin] {
+    background-color: #898;
+}
+
+/* exact match */
+input[data-margin="simple"] {
+    background-color: rgb(185, 226, 185);
+}
+
+/* containing anywhere */
+input[data-margin*="mp"] {
+    background-color: rgb(60, 219, 60);
+}
+
+/* starts with */
+input[data-margin^="ma"] {
+    background-color: aqua;
+}
+
+/* ends with */
+input[data-margin$="ng"] {
+    background-color: coral;
+}

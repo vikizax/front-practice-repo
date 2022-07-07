@@ -1,0 +1,36 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+/* before will keep the sudo content before all the content of the element */
+.box::before {
+    content: '';
+    display: block;
+    height: 20px;
+    width: 20px;
+    background-color: greenyellow;
+}
+
+/* after will keep the sudo content after all the content of the element */
+.box::after {
+    /* content must have some value , eg: a single white space can be taken as content! or '' empty string */
+    content: attr(data-text);
+    /*attr() can read the attribute value! can be used to add dynamic content through css in sudo element!*/
+    display: block;
+    height: 20px;
+    width: 20px;
+    background-color: burlywood
+}
+
+/* :: sudo element, : sudo class */
+/* : sudo class > target element state */
+/* :: sudo element > targets or to add sudo content to the element */
+p::first-letter {
+    font-size: 1.5rem;
+}
+
+p::first-line {
+    background-color: yellow;
+}
