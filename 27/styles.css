@@ -1,0 +1,39 @@
+.div {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: green;
+}
+
+/* ctrl + p -> print screen */
+/* @media print {
+    .div {
+        color: blue;
+    }
+} */
+
+/* @media all and (max-width: 700px) {
+    .div {
+        color: blue;
+    }
+} */
+
+/* @media (orientation: landscape) {
+    .div {
+        color: blue;
+    }
+} */
+
+/* and  */
+/* @media (min-width: 700px) and (max-width: 1000px) {
+    .div {
+        color: blue;
+    }
+} */
+
+/* or using ',' */
+@media (min-width: 700px),
+(orientation: landscape) {
+    .div {
+        color: blue;
+    }
+}

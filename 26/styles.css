@@ -1,0 +1,27 @@
+div {
+    background-color: green;
+}
+
+@supports (background-color: revert) {
+    .div {
+        background-color: lightcoral;
+    }
+}
+
+@supports not(background-color: revert) {
+    .div {
+        background-color: lightblue;
+    }
+}
+
+/* @supports (background-color: revert) and (background-color:green; ) {
+    .div {
+        background-color: red;
+    }
+} */
+
+/* @supports (background-color: revert) or (background-color:green; ) {
+    .div {
+        background-color: red;
+    }
+} */
