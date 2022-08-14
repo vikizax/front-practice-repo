@@ -8,7 +8,7 @@ html {
 
 body {
     margin: 0;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Montserrat', sans-serif;
     color: #1B2522;
 }
 
@@ -128,13 +128,13 @@ body {
 
 .section-accent {
     background-color: #0AF;
-    padding: 1.5rem;
+    /* padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
 }
 
-.free-title {
+/* .free-title {
     color: white;
     text-transform: uppercase;
     margin: 0;
@@ -144,7 +144,7 @@ body {
 .free-sub-title {
     color: white;
     max-width: 300px;
-}
+} */
 
 .form {
     max-width: 900px;
@@ -185,3 +185,104 @@ body {
 .btn-square {
     border-radius: .3em;
 }
+
+
+.pricing-cards-container {
+    display: flex;
+    justify-content: center;
+}
+
+.pricing-card {
+    padding: 1rem;
+    background-color: #DCF4FF;
+    border: 1px solid black;
+    border-radius: .3em;
+    margin: 1rem 0;
+}
+
+.pricing-card.accent {
+    background-color: white;
+    margin: 0;
+}
+
+.pricing-card:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+}
+
+.pricing-card:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
+}
+
+.price-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.plan-name {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.plan-price {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.plan-price::after {
+    content: attr(data-after-content);
+    font-size: .75rem;
+    color: #777;
+}
+
+.feature {
+    margin-bottom: .5rem;
+}
+
+.feature.inactive {
+    color: #777;
+    text-decoration: line-through;
+}
+
+.feature:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+
+    .full-screen-header {
+        background-position-x: 65%;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(1, minmax(auto, 450px));
+        row-gap: 30px;
+    }
+
+    .pricing-cards-container {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .pricing-card:first-child, .pricing-card:last-child {
+        border-radius: .3em;
+        border-right: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+    .pricing-card:last-child {
+        margin-bottom: 0;
+    }
+
+    .feature {
+        text-align: center;
+    }
+
+    .feature.inactive {
+        display: none;
+    }
+
+}   

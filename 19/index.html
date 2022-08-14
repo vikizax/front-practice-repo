@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" s content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page: Flexbox + Grid layout demo!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -79,11 +85,60 @@
           </div>
         </div>
       </section>
+
       <section class="section section-accent">
-        <h2 class="section-title free-title">Free</h2>
-        <p class="free-sub-title">
-          All the content is free to use. No credit card required!
-        </p>
+        <div class="pricing-cards-container">
+          <div class="pricing-card">
+            <div class="price-header">
+              <div class="plan-name">Basic</div>
+              <div class="plan-price" data-after-content="/mo">$10</div>
+            </div>
+            <div class="plan-features">
+              <div class="feature">4 Videos Per Month</div>
+              <div class="feature">1 Project Based Video Per Month</div>
+              <div class="feature inactive">Weekly Live Stream</div>
+              <div class="feature inactive">24/7 Email Support</div>
+              <div class="feature inactive">24/7 Phone Support</div>
+              <div class="feature inactive">
+                1 Project Code Review Per Month
+              </div>
+            </div>
+          </div>
+
+          <div class="pricing-card accent">
+            <div class="price-header">
+              <div class="plan-name">Preferred</div>
+              <div class="plan-price" data-after-content="/mo">$25</div>
+            </div>
+            <div class="plan-features">
+              <div class="feature">6 Videos Per Month</div>
+              <div class="feature">2 Project Based Video Per Month</div>
+              <div class="feature">Weekly Live Stream</div>
+              <div class="feature">24/7 Email Support</div>
+              <div class="feature inactive">24/7 Phone Support</div>
+              <div class="feature inactive">
+                1 Project Code Review Per Month
+              </div>
+            </div>
+          </div>
+
+          <div class="pricing-card">
+            <div class="price-header">
+              <div class="plan-name">Pro</div>
+              <div class="plan-price" data-after-content="/mo">$50</div>
+            </div>
+            <div class="plan-features">
+              <div class="feature">6 Videos Per Month</div>
+              <div class="feature">4 Project Based Video Per Month</div>
+              <div class="feature">Weekly Live Stream</div>
+              <div class="feature">24/7 Email Support</div>
+              <div class="feature">24/7 Phone Support</div>
+              <div class="feature">
+                1 Project Code Review Per Month
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="section">

@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: blue;
+    /* transition: all 0.3s linear 0.2s; */
+    transition-duration: 0.4s;
+    transition-property: color, background-color;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.2s;
+}
+
+.box:hover {
+    color: black;
+    background-color: red;
+    text-decoration: line-through;
+}
