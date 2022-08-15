@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+.btn {
+    background-color: #439c46;
+    outline: none;
+    border-radius: 10px;
+    padding: .8em;
+    border: none;
+    color: white;
+    font-weight: bold;
+    transition-property: background-color, opacity;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    transition-delay: 0;
+}
+
+.btn:hover {
+    background-color: #327535;
+}
+
+.btn.btn-active:active, .btn.btn-active:focus {
+    opacity: 0;
+}
