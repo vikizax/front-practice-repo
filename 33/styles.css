@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    color: white;
+    background-color: blueviolet;
+    /* animation: color-change 1s linear .6s forwards infinite alternate,
+        size-change 1s linear .6s forwards infinite alternate; */
+    animation-name: color-change, size-change;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;   
+    animation-timing-function: linear;
+    /* transform: scaleX(1) scaleY(1.25) rotate(0) translate(100%); */
+    transform: translate(50%);
+    --scale: 1.5;
+}
+
+.box:hover {
+    /* animation: color-change 1s linear .6s both;
+    animation: color-change 1s linear .6s backwards; */
+    /* animation: color-change 1s linear .6s forwards 4 alternate; */
+    /* animation: color-change 1s linear .6s forwards infinite; */
+    /* animation: color-change 1s linear .6s forwards infinite alternate; */
+    animation-play-state: paused;
+}
+
+@keyframes color-change {
+    to {
+        background-color: rgb(56, 149, 56);
+    }
+}
+
+@keyframes size-change {
+    from {
+        transform: translateX(0) scale(var(--scale));
+        transform: translateX(0);
+    }
+    to {
+        font-size: 32px;
+        transform: translateX(100%) scale(var(--scale));
+    }
+}
