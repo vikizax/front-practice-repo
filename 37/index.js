@@ -22,21 +22,16 @@
 /**
  *
  * @param {Object} target
- * @param {String} initialKey
  * @returns {Object}
  */
-function objectFlattening(target, initialKey = "") {
+function objectFlattening(target) {
   let result = {};
-
   Object.keys(target).forEach((parent_key) => {
     const value = target[parent_key];
     if (typeof value === "object" && !Array.isArray(value)) {
       const obj = objectFlattening(value, parent_key);
       Object.keys(obj).forEach((key) => {
-        const currentKey =
-          initialKey.length > 0
-            ? `${initialKey}.${key}`
-            : `${parent_key}.${key}`;
+        const currentKey = `${parent_key + "." + key}`;
         result[`${currentKey}`] = obj[key];
       });
     } else {
@@ -71,6 +66,13 @@ const testObject = {
   },
   testKey1: 1,
   testKey2: 10,
+  testKey3: {
+    a: {
+      b: {
+        c: 10,
+      },
+    },
+  },
 };
 
 console.log(objectFlattening(testObject));
