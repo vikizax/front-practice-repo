@@ -23,7 +23,7 @@
  *
  * @param {Object} target
  * @param {String} initialKey
- * @returns
+ * @returns {Object}
  */
 function objectFlattening(target, initialKey = "") {
   let result = {};
