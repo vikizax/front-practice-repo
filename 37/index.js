@@ -30,7 +30,7 @@ function objectFlattening(target) {
   Object.keys(target).forEach((parent_key) => {
     const value = target[parent_key];
     if (typeof value === "object" && !Array.isArray(value)) {
-      const obj = objectFlattening(value, parent_key);
+      const obj = objectFlattening(value);
       if (obj === null || obj === undefined) {
         const currentKey = `${parent_key}`;
         result[`${currentKey}`] = obj;
