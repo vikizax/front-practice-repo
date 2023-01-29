@@ -90,16 +90,41 @@ const mouseOverEventHandler = debounce((e) => {
   const x1 = parseInt(e.clientX - canvasNode.offsetLeft);
   const y1 = parseInt(e.clientY - canvasNode.offsetTop);
 
-  Object.keys(pointerObj).forEach((key) => {
-    const x2 = pointerObj[key].x + FILL_RECT_OFFSET;
-    const y2 = pointerObj[key].y + FILL_RECT_OFFSET;
+  for (const [key, value] of Object.entries(pointerObj)) {
+    const x2 = value.x + FILL_RECT_OFFSET;
+    const y2 = value.y + FILL_RECT_OFFSET;
 
     const distance = calculateDistance(x1, x2, y1, y2);
 
     if (distance <= threshold) {
-      window.alert(pointerObj[key].label);
+      if (
+        [...containerNode.childNodes].every(
+          (child) => child.id !== `tooltip_${key}`
+        )
+      ) {
+        const tooltipNode = document.createElement("div");
+        tooltipNode.id = `tooltip_${key}`;
+        tooltipNode.style.zIndex = "10";
+        tooltipNode.style.position = "absolute";
+        tooltipNode.style.borderRadius = "80px";
+        tooltipNode.style.border = "1px solid black";
+        tooltipNode.style.backgroundColor = "rgba(255,255,255,0.4)";
+        tooltipNode.style.padding = "2px 6px";
+
+        tooltipNode.style.top = `${parseInt(value.y - FILL_RECT_OFFSET + 10)}px`;
+        tooltipNode.style.left = `${parseInt(value.x)}px`;
+
+        tooltipNode.textContent = value.label;
+        containerNode.appendChild(tooltipNode);
+      }
+    } else {
+      containerNode.childNodes.forEach((child) => {
+        if (child.id === `tooltip_${key}`) {
+          child.remove();
+        }
+      });
     }
-  });
+  }
 }, 500);
 
 canvasNode.addEventListener("mousemove", mouseOverEventHandler);
